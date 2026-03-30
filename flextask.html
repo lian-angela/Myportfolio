@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>Responsive Flexbox</title>
+  
+  <style>
+  
+  body {
+  margin: 0;
+  font-family: Times New Roman;
+  background: white;
+}
+
+.header {
+  background: green;
+  color: white;
+  padding: 15px;
+}
+
+.container {
+  display: flex;
+  gap: 15px;
+  padding: 15px;
+}
+
+.menu {
+  width: 20%;
+}
+
+.menu-item {
+  background: lightgray;
+  padding: 10px;
+  margin-bottom: 5px;
+  border-radius: 5px;
+}
+
+.menu a{
+  display: block;
+  text-decoration: none;
+  color: black;
+}
+
+.menu a:hover, .menu a:focus, .menu a:active{
+  background: seagreen;
+  color: white
+}
+
+.content {
+  width: 55%;
+}
+
+.sidebar {
+  width: 25%;
+  background: dodgerblue;
+  color: white;
+  padding: 10px;
+  border-radius: 5px;
+}
+
+.footer {
+  margin: 15px;
+  padding: 10px;
+  background: #ddd;
+  border-radius: 5px;
+  text-align: center;
+}
+
+@media (max-width: 768px) {
+  .container {
+    flex-wrap: wrap;
+  }
+
+  .menu { width: 30%; }
+  .content { width: 65%; }
+  .sidebar { width: 100%; }
+}
+
+@media (max-width: 480px) {
+  .container {
+    flex-direction: column;
+  }
+
+  .menu,
+  .content,
+  .sidebar {
+    width: 100%;
+  }
+}
+  </style>
+  
+</head>
+<body>
+
+  <div class="header">
+    <h1>Welcome to My Homepage</h1>
+    <p>Use the menu to select different Stylesheets</p>
+  </div>
+
+  <div class="container">
+    <div class="menu">
+      <a href="#" class="menu-item active">Stylesheet 1 </a>
+      <a href="#"  class="menu-item">Stylesheet 2 </a>
+      <a href="#"  class="menu-item">Stylesheet 3 </a>
+      <a href="#" class="menu-item">Stylesheet 4 </a>
+      <a href="#"  class="menu-item">No Stylesheet</a>
+    </div>
+
+    <div class="content">
+      <h2>Same Page Different Stylesheets</h2>
+      <p> Courage isn’t the absence of fear, but the choice to move forward despite it. Every small step you take builds the strength to face bigger challenges.</p>
+        
+      <h3>No Styles</h3>
+      <p>Love isn’t always loud or dramatic. Sometimes it’s quiet—like staying beside someone when they feel lost, or smiling at their small victories. It’s not about perfection or grand gestures; it’s about understanding, patience, and choosing each other every day. True love grows in the little things, the shared silences, and the moments that make ordinary days feel extraordinary.
+      </div>
+
+    <div class="sidebar">
+      <h3>Side-Bar</h3>
+      <p>A happy life is not a perfect life. It's not about being rich, gorgeous, popular, or famous. It's about being real, grateful, kind, and strong—and being able to share your true self with others, allowing them to share theirs. It's about connecting heart to heart, rather than ego to ego. When you can do this, you will experience true happiness, because you will be living with authenticity, love, meaning, and purpose.
+      </div>
+
+  </div>
+
+  <div class="footer">
+    <p>If someone treats you like just one of many options, step back and remove yourself from the equation. Sometimes you have to try not to care, no matter how much you do. It’s not pride—it’s self-respect. Don’t expect positive changes if you surround yourself with negativity. Know your value, and never give part-time people a full-time place in your life.
+    </div>
+
+</body>
+</html>
